@@ -1,0 +1,10 @@
+---
+title: "README"
+author: "Douglas Cirino"
+format: html
+editor: visual
+---
+
+Code to analysis the characteristics related to aesthetics preference of streets of São Paulo.
+
+Here we take 420 scores of aesthetics - calculated in Elo's method - obtained trough a questionnaire answered by more than 3000 people from Brazil about the preference of Google Steet View images of São Paulo Streets.
