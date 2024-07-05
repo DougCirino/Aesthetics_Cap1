@@ -39,11 +39,6 @@ library(GGally)
 library(performance)
 library(lmerTest)
 
-
-
-getwd()
-
-setwd("G:/Meu Drive/PESQUISA - Ecologia Urbana e Serviços Ecossistêmicos/Doutorado/R_Projects/Aesthetics_Cap1")
     
 
     #### Load and edit data ####
