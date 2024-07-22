@@ -1,87 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetics Streets Research Compendium</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #2c3e50;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .code-block {
-            background-color: #f4f4f4;
-            border-left: 10px solid #ccc;
-            padding: 10px;
-            overflow-x: auto;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Aesthetics Streets Research Compendium</h1>
-        <p>Research compendium to reproduce analyses of the article:</p>
-        <p>Cirino D, Mouquet N, Metzger JP (2024) It is not only about green: modeling streetscapes aesthetic in a megacity. In prep.</p>
-        <hr>
-        <div class="section">
-            <h2>General</h2>
-            <p>This repository is structured as follows:</p>
-            <ul>
-                <li><strong>data/:</strong> contains data required to reproduce figures and tables</li>
-                <li><strong>R/:</strong> contains R functions developed for this project</li>
-                <li><strong>analyses/:</strong> contains R scripts to run specific analysis
-                    <ul>
-                        <li>Features_Analysis.R - code to analyze the features of the 420 street images used in the study</li>
-                        <li>Social_characteristis_test.R - analyzes the effect of different social characteristics of the respondents in relation to the evaluation of the images on the survey</li>
-                        <li>Elo_scores2.R - calculates the Elo's scores for each image, assuming that there is no difference between social characteristics</li>
-                        <li>Modeling_final.R - statistical analysis between landscape, image features, and the scores of the images</li>
-                        <li>correlation_GVI_Aesthetics.R - analysis of the correlation between green view index and aesthetics</li>
-                        <li>GVI_Aesthetics_MAP.R - produces a biplot map between GVI and aesthetics - Fig. 8A</li>
-                        <li>supply_demand.R - analysis of the supply of the aesthetical E.S. and the local demand. Produces the biplot between supply and demand - Fig. 5D</li>
-                        <li>Google_streets.R - get the Google Street View images using the Google API and the R package googleway used for further extrapolation of the Elo scoring</li>
-                    </ul>
-                </li>
-                <li><strong>results/:</strong> follows the structure of analyses. Contains intermediate results and the numeric results used to produce the figures.</li>
-            </ul>
-        </div>
-        <hr>
-        <div class="section">
-            <h2>Storage</h2>
-            <p>All the 420 images used for the survey and for the final statistical modeling are available on Flickr: <a href="https://www.flickr.com/photos/197958479@N08/albums/72177720306842197" target="_blank">https://www.flickr.com/photos/197958479@N08/albums/72177720306842197</a></p>
-            <p>All the images were resized and treated by the script <code>analysis/Images/Images.R</code></p>
-        </div>
-        <hr>
-        <div class="section">
-            <h2>Images Coordinates and Final Table with Modeling Information</h2>
-            <p>The coordinates of each image are present in <code>data/dataBase_FINAL.csv</code>, with other information used for the modeling, such as the figure features, and the landscape metrics for each image/landscape.</p>
-        </div>
-        <hr>
-    </div>
-</body>
-</html>
+# AESTHETICS_STREETS
 
+Research compendium to reproduce analyses of the article:
 
-title: "README"
-author: "Douglas Cirino"
-format: html
-editor: visual
+Cirino D, Mouquet N, Metzger JP (2024) It is not only about green: modeling streetscapes aesthetic in a megacity. In prep.
+
 ---
 
+## General
+This repository is structured as follows:
+
+- **data/**: contains data required to reproduce figures and tables
+- **R/**: contains R functions developed for this project
+- **analyses/**: contains R scripts to run specific analyses
+  - `Features_Analysis.R`: code to analyze the features of the 420 street images used in the study
+  - `Social_characteristis_test.R`: analyzes the effect of different social characteristics of the respondents in relation to the evaluation of the images on the survey
+  - `Elo_scores2.R`: calculates the Elo's scores for each image, assuming that there is no difference between social characteristics
+  - `Modeling_final.R`: statistical analysis between landscape, image features, and the scores of the images
+  - `correlation_GVI_Aesthetics.R`: analysis of the correlation between green view index and aesthetics
+  - `GVI_Aesthetics_MAP.R`: produces a biplot map between GVI and aesthetics - Fig. 8A
+  - `supply_demand.R`: analysis of the supply of the aesthetical E.S. and the local demand. Produces the biplot between supply and demand - Fig. 5D
+  - `Google_streets.R`: get the Google Street View images using the Google API and the R package googleway used for further extrapolation of the Elo scoring
+- **results/**: follows the structure of analyses. Contains intermediate results and the numeric results used to produce the figures.
+
+---
+
+## Storage
+
+All the 420 images used for the survey and for the final statistical modeling are available on Flickr: [https://www.flickr.com/photos/197958479@N08/albums/72177720306842197](https://www.flickr.com/photos/197958479@N08/albums/72177720306842197)  
+All the images were resized and treated by the script `analysis/Images/Images.R`
+
+---
+
+## Images Coordinates and Final Table with Modeling Information
+
+The coordinates of each image are present in `data/dataBase_FINAL.csv`, with other information used for the modeling, such as the figure features and the landscape metrics for each image/landscape.
